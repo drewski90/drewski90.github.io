@@ -3,7 +3,7 @@ layout: base
 title: Andrew Martinez
 ---
 
-<header class="hero position-relative overflow-hidden  mb-3">
+<header class="hero position-relative overflow-hidden mb-3">
 
   <!-- Animated Canvas -->
   <canvas id="heroCanvas"
@@ -11,34 +11,25 @@ title: Andrew Martinez
           style="z-index:0;"></canvas>
 
   <!-- Content -->
-  <div style="z-index:1;">
+  <div class="position-relative" style="z-index:1;">
     <div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="">
+      <div class="row justify-content-center">
+        <div class="col text-center">
 
-      <!-- Headline -->
-      <h1 class="display-4 mb-3 text-center">
-        Andrew Martinez
-      </h1>
+          <h1 class="display-4 mb-3">
+            Andrew Martinez
+          </h1>
 
-      <!-- Capability proof -->
-      <div class="d-flex justify-content-center mb-4 small text-secondary">
-        <span id="rotating-badge"
-              class="h5 p-2 m-0">
-        </span>
+          <div class="d-flex justify-content-center mb-4 small text-secondary">
+            <span id="rotating-badge" class="h5 p-2 m-0"></span>
+          </div>
+
+        </div>
       </div>
-
-
-
     </div>
   </div>
-</div>
 
-  </div>
-
-  </div>
 </header>
-
 
 
 <script type="module">
@@ -64,6 +55,5 @@ title: Andrew Martinez
     ]
   });
 </script>
-
 
 {% include project_cards.html %}

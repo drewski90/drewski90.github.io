@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="//assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
   <div class="container d-flex justify-content-center">
 
     <div class="flex-grow-1">
-      <a class="navbar-brand fw-semibold" href="//">
+      <a class="navbar-brand fw-semibold" href="/">
         Andrew Martinez
       </a>
     </div>
@@ -60,21 +60,21 @@
       
       <li class="nav-item">
         <a class="nav-link text-light fw-bold"
-           href="//">
+           href="/">
           Home
         </a>
       </li>
       
       <li class="nav-item">
         <a class="nav-link text-light "
-           href="//#projects">
+           href="/#projects">
           Projects
         </a>
       </li>
       
       <li class="nav-item">
         <a class="nav-link text-light "
-           href="//about">
+           href="/about">
           About
         </a>
       </li>
@@ -90,7 +90,7 @@
             
             <li>
               <a class="nav-link text-light small"
-                 href="//projects/aircraftops/">
+                 href="/projects/aircraftops/">
                 Purpose
               </a>
             </li>
@@ -99,7 +99,7 @@
             
             <li>
               <a class="nav-link text-light small"
-                 href="//projects/aircraftops/architecture">
+                 href="/projects/aircraftops/architecture">
                 Architecture
               </a>
             </li>
@@ -117,7 +117,7 @@
             
             <li>
               <a class="nav-link text-light small"
-                 href="//projects/agt/">
+                 href="/projects/agt/">
                 Purpose
               </a>
             </li>
@@ -126,7 +126,7 @@
             
             <li>
               <a class="nav-link text-light small"
-                 href="//projects/agt/architecture">
+                 href="/projects/agt/architecture">
                 Architecture
               </a>
             </li>
@@ -143,41 +143,34 @@
 
   <main style="margin-top: 64px;">
     
-    <header class="hero position-relative overflow-hidden  mb-3">
+    <header class="hero position-relative overflow-hidden mb-3">
 
   <!-- Animated Canvas -->
   <canvas id="heroCanvas" class="gl-canvas position-absolute top-0 start-0 w-100 h-100" style="z-index:0;"></canvas>
 
   <!-- Content -->
-  <div style="z-index:1;">
+  <div class="position-relative" style="z-index:1;">
     <div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="">
+      <div class="row justify-content-center">
+        <div class="col text-center">
 
-      <!-- Headline -->
-      <h1 class="display-4 mb-3 text-center">
-        Andrew Martinez
-      </h1>
+          <h1 class="display-4 mb-3">
+            Andrew Martinez
+          </h1>
 
-      <!-- Capability proof -->
-      <div class="d-flex justify-content-center mb-4 small text-secondary">
-        <span id="rotating-badge" class="h5 p-2 m-0">
-        </span>
+          <div class="d-flex justify-content-center mb-4 small text-secondary">
+            <span id="rotating-badge" class="h5 p-2 m-0"></span>
+          </div>
+
+        </div>
       </div>
-
-
-
     </div>
   </div>
-</div>
 
-  </div>
-
-  &lt;/div&gt;
 </header>
 
 <script type="module">
-  import { initHoloShader } from "//assets/js/shader.js";
+  import { initHoloShader } from "/assets/js/shader.js";
 
   document.querySelectorAll(".gl-canvas").forEach(canvas => {
     initHoloShader(canvas);
@@ -185,7 +178,7 @@
 </script>
 
 <script type="module">
-  import { initRotatingBadge } from "//assets/js/rotatingBadge.js";
+  import { initRotatingBadge } from "/assets/js/rotatingBadge.js";
 
   initRotatingBadge({
     element: document.getElementById("rotating-badge"),
@@ -210,7 +203,7 @@
     <div class="col-12 col-md-6 mb-4">
 
       <div class="card h-100 shadow-sm project-card position-relative">
-        <a href="//projects/aircraftops" class="stretched-link"></a>
+        <a href="/projects/aircraftops" class="stretched-link"></a>
 
         <div class="card-body p-3">
 
@@ -235,8 +228,8 @@
             <!-- Image / Viewport -->
             <div class="col-12 px-2">
               <div class="ratio ratio-16x9 project-viewport">
-                <a href="//projects/aircraftops" class="stretched-link">
-                    <div class="project-image" style="background-image: url('//assets/img/01KDJ4D4C3M4JJT969R862KXTA.webp');">
+                <a href="/projects/aircraftops" class="stretched-link">
+                    <div class="project-image" style="background-image: url('/assets/img/01KDJ4D4C3M4JJT969R862KXTA.webp');">
                     </div>
                 </a>
               </div>
@@ -315,7 +308,7 @@
     <div class="col-12 col-md-6 mb-4">
 
       <div class="card h-100 shadow-sm project-card position-relative">
-        <a href="//projects/agt" class="stretched-link"></a>
+        <a href="/projects/agt" class="stretched-link"></a>
 
         <div class="card-body p-3">
 
@@ -340,8 +333,8 @@
             <!-- Image / Viewport -->
             <div class="col-12 px-2">
               <div class="ratio ratio-16x9 project-viewport">
-                <a href="//projects/agt" class="stretched-link">
-                    <div class="project-image" style="background-image: url('//assets/img/home_agt_pricing_5.jpg');">
+                <a href="/projects/agt" class="stretched-link">
+                    <div class="project-image" style="background-image: url('/assets/img/home_agt_pricing_5.jpg');">
                     </div>
                 </a>
               </div>
@@ -419,6 +412,7 @@
     
   </div>
 </section>
+
 
 
   </main>

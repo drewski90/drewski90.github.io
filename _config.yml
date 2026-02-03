@@ -4,7 +4,7 @@ description: >
   Software engineer portfolio. Real systems, real architecture,
   AWS, distributed systems, and product engineering.
 
-baseurl: "/"
+baseurl: ""
 url: "https://drewski90.github.io"
 
 github_username: drewski90
