@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.8/lux/bootstrap.min.css" integrity="sha512-RgYivnvxINaQk1Yl88jIP++kmQgSz6rtxyhZ8bSZHFnhq3t4MlNOuUqX252yJwc4kSKl19Ej9dZ0cPvbqsp/kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-black position-fixed p-2" style="top:0px; width:100vw;z-index: 1000; width: 100vw;" data-bs-theme="dark">
+  <div class="container d-flex justify-content-center">
+
+    <div class="flex-grow-1">
+      <a class="navbar-brand fw-semibold" href="/">
+        Andrew Martinez
+      </a>
+    </div>
+
+    <!-- Right-side sidebar trigger -->
+    <button class="btn btn-outline-light ms-auto border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebarRight"
+            aria-controls="sidebarRight">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end bg-dark text-light"
+     tabindex="-1"
+     id="sidebarRight"
+     data-bs-scroll="false"
+     data-bs-backdrop="true">
+
+
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">
+      Andrew Martinez
+    </h5>
+    <button type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="nav flex-column gap-2">
+
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/">
+          Home
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/#projects">
+          Projects
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/about">
+          About
+        </a>
+      </li>
+      
+
+      
+      <li class="nav-item mt-3">
+        <div class="text-uppercase small opacity-75">
+          Aircraft-Ops
+        </div>
+        <ul class="nav flex-column ms-2 mt-1">
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/aircraftops/">
+                Purpose
+              </a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/aircraftops/architecture">
+                Architecture
+              </a>
+            </li>
+            
+          
+        </ul>
+      </li>
+      
+      <li class="nav-item mt-3">
+        <div class="text-uppercase small opacity-75">
+          A Goddess’s Touch
+        </div>
+        <ul class="nav flex-column ms-2 mt-1">
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/agt/">
+                Purpose
+              </a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/agt/architecture">
+                Architecture
+              </a>
+            </li>
+            
+          
+        </ul>
+      </li>
+      
+
+    </ul>
+  </div>
+</div>
+
+
+  <main style="margin-top: 64px;">
+    
+    
+
+
+
+<header style="max-height:50vh;"
+        class="hero ratio ratio-16x9 position-relative overflow-hidden mb-4
+               d-flex justify-content-center align-items-center">
+
+  
+  <img src="/assets/img/home_agt_pricing_5.jpg"
+       class="position-absolute top-50 start-50 translate-middle"
+       style="min-width:100%; min-height:100%; object-fit:cover; z-index:0;" />
+  
+
+  <!-- Overlay -->
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Content -->
+  <div class="w-100 d-flex align-items-center justify-content-center text-center" style="z-index:2;">
+    <div class="py-2 px-2">
+      <h1 class="display-6 text-white fw-semibold mb-3">
+        A Goddess’s Touch
+      </h1>
+
+      <h5 class="mb-4 text-secondary">
+        Booking, payments, and operations webapp for a service business
+      </h5>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 small text-secondary">
+        
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+  
+
+  
+  <div class="container">
+    <div class="d-flex gap-2 align-items-center mt-3 project-subnav mb-4">
+
+        <span class="text-uppercase small opacity-75 me-2">
+        A Goddess’s Touch
+        </span>
+
+        
+        <a href="/projects/agt/"
+            class="btn btn-sm btn-outline-secondary active">
+            Purpose
+        </a>
+        
+        <a href="/projects/agt/architecture"
+            class="btn btn-sm btn-outline-secondary ">
+            Architecture
+        </a>
+        
+
+    </div>
+    </div>
+  
+
+
+
+<div class="container">
+
+  <section class="mb-5">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="mb-3">What Is A Goddess’s Touch?</h2>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <img src="/assets/img/Screenshot 2026-02-02 at 04-50-38 A Goddesses Touch.webp" style="width:100%;" />
+          </div>
+          <div class="col-12 col-md-8 mb-4">
+            
+              <p class="text-secondary">A Goddess’s Touch is a full-stack commerce and operations platform built to replace manual scheduling, fragmented payments, and ad-hoc staff coordination.</p>
+            
+              <p class="text-secondary">The system centralizes bookings, online payments, staff scheduling, and affiliate referrals into a single real-time operational platform.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TARGET USERS -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4">Who This Is For</h3>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <h5>Staff / Team Members</h5>
+          <p class="text-secondary">Manage availability, appointments, and daily schedules.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <h5>Customers</h5>
+          <p class="text-secondary">Book services and pay online in real time.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <h5>Affiliates</h5>
+          <p class="text-secondary">Share tracked referral links and generate bookings.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- CORE WORKFLOWS -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4">Core Workflows</h3>
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <h5>Customer Booking</h5>
+          <ul class="text-secondary mb-0">
+            
+            <li>Customers browse services</li>
+            
+            <li>Select time slots</li>
+            
+            <li>Pay online via Square</li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <h5>Staff Scheduling</h5>
+          <ul class="text-secondary mb-0">
+            
+            <li>Set availability</li>
+            
+            <li>Manage appointments</li>
+            
+            <li>View daily schedules</li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <h5>Business Management</h5>
+          <ul class="text-secondary mb-0">
+            
+            <li>Owner manages pricing</li>
+            
+            <li>Tracks revenue</li>
+            
+            <li>Manages staff roles</li>
+            
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <h5>Affiliate Referrals</h5>
+          <ul class="text-secondary mb-0">
+            
+            <li>Generate referral links</li>
+            
+            <li>Track conversions</li>
+            
+            <li>Attribute bookings</li>
+            
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- SYSTEM CAPABILITIES -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4 text-center">Platform Capabilities</h3>
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Real-Time Booking Calendar</h6>
+            <p class="text-secondary mb-0">Customers book appointments in real time.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Online Payments</h6>
+            <p class="text-secondary mb-0">Integrated Square payment processing.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Staff Admin Dashboard</h6>
+            <p class="text-secondary mb-0">Team members manage schedules and appointments.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Appointment Management</h6>
+            <p class="text-secondary mb-0">Full CRUD appointment workflows.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Affiliate Referral System</h6>
+            <p class="text-secondary mb-0">Tracked referral links with attribution.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>Role-Based Access</h6>
+            <p class="text-secondary mb-0">Permissions for owners, staff, and affiliates.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+
+  
+
+
+</div>
+
+  </main>
+
+  <footer class="-top py-4 mt-5">
+  <div class="container text-center text-muted small">
+    <div>&copy; 2026 Andrew Martinez</div>
+    <div class="mt-1">
+      <a href="https://github.com/YOUR_GITHUB" class="text-muted me-3">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" class="text-muted">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

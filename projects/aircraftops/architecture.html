@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.8/lux/bootstrap.min.css" integrity="sha512-RgYivnvxINaQk1Yl88jIP++kmQgSz6rtxyhZ8bSZHFnhq3t4MlNOuUqX252yJwc4kSKl19Ej9dZ0cPvbqsp/kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-black position-fixed p-2" style="top:0px; width:100vw;z-index: 1000; width: 100vw;" data-bs-theme="dark">
+  <div class="container d-flex justify-content-center">
+
+    <div class="flex-grow-1">
+      <a class="navbar-brand fw-semibold" href="/">
+        Andrew Martinez
+      </a>
+    </div>
+
+    <!-- Right-side sidebar trigger -->
+    <button class="btn btn-outline-light ms-auto border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebarRight"
+            aria-controls="sidebarRight">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end bg-dark text-light"
+     tabindex="-1"
+     id="sidebarRight"
+     data-bs-scroll="false"
+     data-bs-backdrop="true">
+
+
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">
+      Andrew Martinez
+    </h5>
+    <button type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="nav flex-column gap-2">
+
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/">
+          Home
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/#projects">
+          Projects
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-light "
+           href="/about">
+          About
+        </a>
+      </li>
+      
+
+      
+      <li class="nav-item mt-3">
+        <div class="text-uppercase small opacity-75">
+          Aircraft-Ops
+        </div>
+        <ul class="nav flex-column ms-2 mt-1">
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/aircraftops/">
+                Purpose
+              </a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/aircraftops/architecture">
+                Architecture
+              </a>
+            </li>
+            
+          
+        </ul>
+      </li>
+      
+      <li class="nav-item mt-3">
+        <div class="text-uppercase small opacity-75">
+          A Goddess’s Touch
+        </div>
+        <ul class="nav flex-column ms-2 mt-1">
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/agt/">
+                Purpose
+              </a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="nav-link text-light small"
+                 href="/projects/agt/architecture">
+                Architecture
+              </a>
+            </li>
+            
+          
+        </ul>
+      </li>
+      
+
+    </ul>
+  </div>
+</div>
+
+
+  <main style="margin-top: 64px;">
+    
+    
+
+
+<header style="max-height:50vh;"
+        class="hero ratio ratio-16x9 position-relative overflow-hidden mb-4
+               d-flex justify-content-center align-items-center">
+
+  
+  <img src="/assets/img/01KE62MJQKFBA5NPQQAMM2SY0A.webp"
+       class="position-absolute top-50 start-50 translate-middle"
+       style="min-width:100%; min-height:100%; object-fit:cover; z-index:0;" />
+  
+
+  <!-- Overlay -->
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Content -->
+  <div class="w-100 d-flex align-items-center justify-content-center text-center" style="z-index:2;">
+    <div class="py-2 px-2">
+      <h1 class="display-6 text-white fw-semibold mb-3">
+        Aircraft-Ops
+      </h1>
+
+      <h5 class="mb-4 text-secondary">
+        Unified operational tooling for aviation organizations.
+      </h5>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 small text-secondary">
+        
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+  
+  <div class="container">
+    <div class="d-flex gap-2 align-items-center mt-3 project-subnav mb-4">
+
+        <span class="text-uppercase small opacity-75 me-2">
+        Aircraft-Ops
+        </span>
+
+        
+        <a href="/projects/aircraftops/"
+            class="btn btn-sm btn-outline-secondary ">
+            Purpose
+        </a>
+        
+        <a href="/projects/aircraftops/architecture"
+            class="btn btn-sm btn-outline-secondary ">
+            Architecture
+        </a>
+        
+
+    </div>
+    </div>
+  
+
+  
+
+
+
+<div class="container">
+
+  <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+
+<!-- PLATFORM ARCHITECTURE -->
+<section class="mb-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="mb-3">Platform Architecture</h2>
+      <p class="text-secondary">
+        AircraftOps is designed as a multi-tenant operational platform for organizations.
+        The system provides a shared infrastructure layer for domain entities, documents,
+        scheduling, permissions, and real-time activity feeds.
+      </p>
+      <p class="text-secondary">
+        Some subsystems are already implemented, while others are architected and planned
+        as part of a coherent platform roadmap.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="row">
+
+  <div class="col-lg-7">
+    <!-- DIAGRAM -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="fw-semibold mb-3">High-Level System Graph</h4>
+          <p class="text-secondary mb-4">
+            All capabilities are built on a shared event-driven substrate.
+            The application layer emits commands and renders state.
+            Background pipelines handle ingestion, indexing, and analytics.
+          </p>
+          <div id="diagram-container" class="rounded overflow-hidden" style="max-height:450px;border:black solid 1px;  box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 4px 10px rgba(0, 0, 0, 0.6);">
+            <img id="diagram" src="/assets/img/infrastructure-composer-fboops.webp" class="w-100" style="cursor: grab;" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-5">
+    <!-- IMPLEMENTED CORE -->
+    <section class="mb-5">
+      <h3 class="fw-semibold mb-4">Implemented Core Systems</h3>
+      <div class="row g-4">
+
+        <div class="col-12">
+          <div class="card h-100 p-4">
+            <h6>Domain Entity Registry</h6>
+            <p class="text-secondary">
+              Core business objects are modeled as typed domain entities
+              stored in a unified data model.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card h-100 p-4">
+            <h6>Event Infrastructure</h6>
+            <p class="text-secondary">
+              All entity mutations emit structured events via DynamoDB Streams
+              and Redis, which drive background pipelines for indexing,
+              metrics, and analytics.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card h-100 p-4">
+            <h6>Search Layer</h6>
+            <p class="text-secondary">
+              Domain entities are synchronized into Typesense for keyword search,
+              with vector embeddings stored in S3 for semantic retrieval.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ARCHITECTED SYSTEMS -->
+<section class="mb-5">
+  <h3 class="fw-semibold mb-4">Architected Systems</h3>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 p-4">
+        <h6>Observability &amp; Analytics</h6>
+        <p class="text-secondary">
+          Audit events are streamed through Firehose into S3 and queried
+          via Athena for time-based operational analytics.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 p-4">
+        <h6>Document Vault</h6>
+        <p class="text-secondary">
+          First-class document entities with metadata,
+          ownership, indexing, and semantic retrieval.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 p-4">
+        <h6>Scheduling Engine</h6>
+        <p class="text-secondary">
+          Time-based domain objects that emit system events
+          and drive workflows.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLANNED CAPABILITIES -->
+<section class="mb-5">
+  <h3 class="fw-semibold mb-4">Planned Platform Capabilities</h3>
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="card h-100 p-4">
+        <h6>Activity Feed</h6>
+        <p class="text-secondary">
+          Instagram-style event feed showing all organizational
+          activity in real time.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100 p-4">
+        <h6>Semantic Knowledge Layer</h6>
+        <p class="text-secondary">
+          Vector-based retrieval over internal documents,
+          memos, SOPs, and operational records.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SYSTEM PHILOSOPHY -->
+<section class="mb-5">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="fw-semibold mb-3">System Philosophy</h3>
+      <ul class="text-secondary">
+        <li>Everything is an entity</li>
+        <li>Everything emits events</li>
+        <li>Everything is permissioned</li>
+        <li>Nothing mutates without history</li>
+      </ul>
+      <p class="text-secondary col-lg-9">
+        AircraftOps is built as a long-term platform, not a single-purpose app.
+        The current implementation represents the core substrate.
+        The remaining systems are logical extensions of the same architecture.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const elem = document.getElementById('diagram');
+  const panzoom = Panzoom(elem, {
+    maxScale: 6,
+    minScale: 1,
+    contain: 'outside'
+  });
+
+  panzoom.zoom(1.1, { animate: false });
+
+  elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+</script>
+
+
+
+</div>
+
+  </main>
+
+  <footer class="-top py-4 mt-5">
+  <div class="container text-center text-muted small">
+    <div>&copy; 2026 Andrew Martinez</div>
+    <div class="mt-1">
+      <a href="https://github.com/YOUR_GITHUB" class="text-muted me-3">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" class="text-muted">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

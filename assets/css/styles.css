@@ -1,0 +1,340 @@
+.hero {
+  height: 60vh;
+  min-height: 320px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .container {
+  max-width: 760px;
+}
+
+#heroCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
+
+body {
+  color: var(--bs-body-color);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: radial-gradient(
+    ellipse at top,
+    #141824 0%,
+    #0b0e11 45%,
+    #050608 100%
+  );
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+::selection { background: rgba(34, 211, 238, 0.22); }
+
+/* ==========================================================
+   Cards
+   ========================================================== */
+
+.card {
+  background-color: rgb(45, 43, 49);
+  border-radius: var(--radius-2);
+  color: #e6e6e6;
+  transition: border 0.25s ease;
+  border: solid 1px rgb(0, 0, 0) !important;
+  background: radial-gradient(
+    ellipse at top,
+    #141824 0%,
+    #0b0e11 45%,
+    #16171a 100%
+  );
+}
+
+a > div.card:hover {
+  border: solid 1px rgba(182, 197, 253, 0.3) !important;
+}
+
+.card-header,
+.card-footer {
+  background: transparent;
+  border-color: var(--bs-border-color-translucent);
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  box-shadow: var(--focus-ring) !important;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: radial-gradient(
+    ellipse at top,
+    #141824 0%,
+    #0b0e11 45%,
+    #050608 100%
+  );
+}
+
+.btn-primary:hover {
+  filter: brightness(1.04);
+}
+
+.btn-outline-primary {
+  color: rgba(34, 211, 238, 0.95);
+  border-color: rgba(34, 211, 238, 0.35);
+  background: rgba(34, 211, 238, 0.06);
+}
+
+.btn-outline-primary:hover {
+  color: #001018;
+  background: rgba(34, 211, 238, 0.95);
+  border-color: rgba(34, 211, 238, 0.75);
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  border-color: rgba(230, 237, 246, 0.14);
+}
+
+/* ==========================================================
+   Forms / inputs
+   ========================================================== */
+
+.form-control,
+.form-select,
+.input-group-text {
+  background: rgba(18, 25, 34, 0.72);
+  color: var(--bs-body-color);
+  border: 1px solid rgba(230, 237, 246, 0.14);
+  border-radius: var(--radius-1);
+}
+
+.form-control::placeholder { color: rgba(230, 237, 246, 0.45); }
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(34, 211, 238, 0.60);
+  box-shadow: var(--focus-ring);
+  background: rgba(18, 25, 34, 0.82);
+}
+
+.form-check-input {
+  background-color: rgba(18, 25, 34, 0.72);
+  border-color: rgba(230, 237, 246, 0.22);
+}
+
+.form-check-input:focus { box-shadow: var(--focus-ring); }
+
+.form-check-input:checked {
+  background-color: rgba(34, 211, 238, 0.95);
+  border-color: rgba(34, 211, 238, 0.95);
+}
+
+/* ==========================================================
+   Tables
+   ========================================================== */
+
+.table {
+  --bs-table-color: var(--bs-body-color);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: rgba(230, 237, 246, 0.10);
+}
+
+.table thead th {
+  color: rgba(230, 237, 246, 0.78);
+  font-weight: 700;
+  border-bottom-color: rgba(230, 237, 246, 0.14);
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(34, 211, 238, 0.06);
+}
+
+/* ==========================================================
+   Nav / pills / tabs
+   ========================================================== */
+
+.nav-link {
+  color: rgba(230, 237, 246, 0.80);
+}
+
+.nav-link:hover { color: rgba(230, 237, 246, 0.95); }
+
+.nav-pills .nav-link.active {
+  background: rgba(34, 211, 238, 0.14);
+  color: rgba(34, 211, 238, 0.95);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+}
+
+/* ==========================================================
+   Dropdowns / popovers / modals
+   ========================================================== */
+
+.dropdown-menu,
+.popover,
+.modal-content {
+  background: linear-gradient(180deg, rgba(28, 40, 56, 0.92), rgba(14, 18, 26, 0.92));
+  border: 1px solid rgba(230, 237, 246, 0.12);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
+
+.dropdown-item {
+  color: rgba(230, 237, 246, 0.86);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(34, 211, 238, 0.08);
+  color: rgba(230, 237, 246, 0.98);
+}
+
+/* ==========================================================
+   Alerts / badges
+   ========================================================== */
+
+.badge.text-bg-primary {
+  color: #001018 !important;
+  background: rgba(34, 211, 238, 0.95) !important;
+}
+
+.alert {
+  background: rgba(18, 25, 34, 0.72);
+  border: 1px solid rgba(230, 237, 246, 0.12);
+  border-radius: var(--radius-2);
+}
+
+/* ==========================================================
+   Utilities
+   ========================================================== */
+
+.glass {
+  background: rgba(18, 25, 34, 0.60);
+  border: 1px solid rgba(230, 237, 246, 0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-2);
+}
+
+li, .text-secondary, p, span, .text-light {
+  color: rgb(255, 255, 255) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.8),
+    0 1px 4px rgba(0,0,0,0.8),
+    0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ==========================================================
+   Project viewport
+   ========================================================== */
+
+.project-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-viewport .gl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.project-viewport .project-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.project-viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ==========================================================
+   Rotating badge
+   ========================================================== */
+
+#rotating-badge {
+  position: relative;
+  white-space: nowrap;
+}
+
+#rotating-badge::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 6px;
+  color: #9aa4b2;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ==========================================================
+   Hero overlay
+   ========================================================== */
+
+.hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.65) 0%,
+      rgba(0,0,0,0.55) 40%,
+      rgba(0,0,0,0.75) 100%
+    );
+}
+
+.project-subnav .btn {
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.project-subnav .btn.active {
+  background: rgba(34, 211, 238, 0.15);
+  border-color: rgba(34, 211, 238, 0.6);
+  color: rgba(34, 211, 238, 0.95);
+}
+
+.offcanvas {
+  max-width: 60vw !important;
+}
