@@ -12,6 +12,8 @@ dropdowns:
   - id: aircraftops
     title: Aircraft-Ops
     items:
+      - title: View Live
+        url: https://aircraft-ops.com/registry
       - title: Purpose
         url: /projects/aircraftops/
       - title: Architecture
@@ -20,6 +22,8 @@ dropdowns:
   - id: agt
     title: A Goddess’s Touch
     items:
+      - title: View Live
+        url: https://app.agoddessestouch.com/
       - title: Purpose
         url: /projects/agt/
       - title: Architecture
