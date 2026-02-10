@@ -1,0 +1,54 @@
+---
+layout: base
+---
+
+<div>
+
+  <!-- Post header -->
+  <header class="mb-3 py-5" style="background-color: rgba(0,0,0,.9);">
+    <div class="container">
+        <h1 class="fw-bold">{{ page.title }}</h1>
+
+        <div class="text-secondary small">
+        {{ page.date | date: "%B %d, %Y" }}
+        {% if page.tags %}
+            •
+            {% for tag in page.tags %}
+            <span class="badge bg-secondary">{{ tag }}</span>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+  </header>
+
+  <!-- Featured image -->
+  {% if page.image %}
+  <div class="mb-4">
+    <img src="{{ site.baseurl }}{{ page.image }}"
+         class="img-fluid rounded">
+  </div>
+  {% endif %}
+
+  <!-- Post body -->
+  <article class="fs-5 lh-lg">
+    {{ content }}
+  </article>
+
+  <!-- Post footer navigation -->
+  <hr class="my-5">
+
+  <div class="d-flex justify-content-between">
+    {% if page.previous %}
+      <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-outline-secondary">
+        ← {{ page.previous.title }}
+      </a>
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn btn-outline-secondary ms-auto">
+        {{ page.next.title }} →
+      </a>
+    {% endif %}
+  </div>
+
+</div>

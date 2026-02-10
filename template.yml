@@ -1,0 +1,112 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Serverless Form Intake Stack
+
+Parameters:
+  DomainName:
+    Type: String
+  HostedZoneId:
+    Type: String
+    Description: Route53 Hosted Zone ID for the domain
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Timeout: 10
+    MemorySize: 128
+
+Resources:
+
+  #################################
+  # SES Domain Identity
+  #################################
+  SesDomainIdentity:
+    Type: AWS::SES::EmailIdentity
+    Properties:
+      EmailIdentity: !Ref DomainName
+
+  #################################
+  # Route53 DKIM records
+  #################################
+  DKIMRecord1:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !GetAtt SesDomainIdentity.DkimDNSTokenName1
+      Type: CNAME
+      TTL: 300
+      ResourceRecords:
+        - !GetAtt SesDomainIdentity.DkimDNSTokenValue1
+
+  DKIMRecord2:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !GetAtt SesDomainIdentity.DkimDNSTokenName2
+      Type: CNAME
+      TTL: 300
+      ResourceRecords:
+        - !GetAtt SesDomainIdentity.DkimDNSTokenValue2
+
+  DKIMRecord3:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !GetAtt SesDomainIdentity.DkimDNSTokenName3
+      Type: CNAME
+      TTL: 300
+      ResourceRecords:
+        - !GetAtt SesDomainIdentity.DkimDNSTokenValue3
+
+  #########################################
+  # DynamoDB
+  #########################################
+  FormTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${AWS::StackName}-form-submissions"
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: submission_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: submission_id
+          KeyType: HASH
+
+  #########################################
+  # Lambda
+  #########################################
+  FormHandlerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-form-handler"
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref FormTable
+          DOMAIN: !Ref DomainName
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - DynamoDBCrudPolicy:
+            TableName: !Ref FormTable
+        - Statement:
+            Effect: Allow
+            Action:
+              - ses:SendEmail
+              - ses:SendRawEmail
+            Resource: "*"
+      FunctionUrlConfig:
+        AuthType: NONE
+        Cors:
+          AllowOrigins:
+            - !Sub https://${DomainName}
+          AllowMethods:
+            - POST
+          AllowHeaders:
+            - Content-Type
+
+
+Outputs:
+  FunctionUrl:
+    Value: !GetAtt FormHandlerFunctionUrl.FunctionUrl

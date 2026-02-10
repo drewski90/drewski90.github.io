@@ -1,0 +1,10 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "apmartinez-forms"
+resolve_s3 = true
+s3_prefix = "apmartinez-forms"
+region = "us-west-1"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "DomainName=\"apmartinez.com\" HostedZoneId=\"Z08823851SNY3RZB734S7\""
+image_repositories = []

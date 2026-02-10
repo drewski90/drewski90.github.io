@@ -1,29 +1,173 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2026-01-29 05:51:39 -0800
+title:  "Freelance Services"
+date:   2026-02-09 05:51:39 -0800
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+<div class="container">
 
-`YEAR-MONTH-DAY-title.MARKUP`
+  <!-- Intro -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <p class="lead text-secondary">
+        WordPress / Elementor / WooCommerce / AWS / Integrations / Automation
+      </p>
+      <p class="mb-0">
+        Experienced full-stack developer available for website systems, backend work,
+        and business workflow automation. I focus on practical engineering work —
+        building integrations, fixing systems, automating workflows, and improving
+        reliability for existing platforms.
+      </p>
+    </div>
+  </div>
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+  <div class="row g-4">
 
-Jekyll also offers powerful support for code snippets:
+    <!-- Platforms -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-semibold mb-3">Platforms</h5>
+          <ul class="mb-0">
+            <li>WordPress / Elementor development and troubleshooting</li>
+            <li>WooCommerce customization and checkout workflows</li>
+            <li>Shopify and Magento backend customization</li>
+            <li>Custom backend services and integrations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+    <!-- Forms & Automation -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-semibold mb-3">Forms, Email & Workflow Automation</h5>
+          <ul class="mb-0">
+            <li>Contact, booking, and quote request forms</li>
+            <li>Email notification and autoresponder automation</li>
+            <li>Zapier / Make workflow automation</li>
+            <li>Form-to-CRM and system integrations</li>
+            <li>Payment and order processing workflows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+    <!-- Backend -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-semibold mb-3">Backend & Data Services</h5>
+          <ul class="mb-0">
+            <li>API integrations (payments, CRM, scheduling)</li>
+            <li>AWS backend services (Lambda, API Gateway, DynamoDB, S3)</li>
+            <li>Web scraping and automated data pipelines</li>
+            <li>Data engineering workflows and ETL automation</li>
+            <li>Backend troubleshooting and system automation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+    <!-- Typical Projects -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-semibold mb-3">Typical Projects</h5>
+          <ul class="mb-0">
+            <li>Connecting websites to internal or third-party APIs</li>
+            <li>Automating manual business processes</li>
+            <li>Fixing broken forms, integrations, or WooCommerce workflows</li>
+            <li>Building reporting pipelines and operational dashboards</li>
+            <li>Performance optimization for WordPress and ecommerce sites</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer CTA -->
+  <div class="text-center mt-5">
+    <p class="mb-1 fw-semibold">Bay Area / Remote OK</p>
+    <p class="text-secondary">
+      Reply with your website URL, description of the work needed,
+      timeline, and budget range.
+    </p>
+  </div>
+
+</div>
+
+
+<div class="container py-5" style="max-width:700px;">
+
+  <div class="card shadow-lg border-0">
+    <div class="card-body p-5">
+
+      <h3 class="mb-4 fw-semibold text-center">
+        Contact / Project Request
+      </h3>
+
+      <form id="contactForm">
+
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input class="form-control form-control-lg" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control form-control-lg" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Company (optional)</label>
+          <input class="form-control form-control-lg" name="company">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">Project Details</label>
+          <textarea class="form-control" rows="5" name="message" required></textarea>
+        </div>
+
+        <div class="d-grid">
+          <button class="btn btn-primary btn-lg">
+            Send Request
+          </button>
+        </div>
+
+        <div id="formStatus" class="text-center mt-3 small"></div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(form));
+
+  status.innerText = "Sending...";
+
+  const res = await fetch("https://iz6lue2sgrqksxoemuzvkygrrq0josfk.lambda-url.us-west-1.on.aws/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  if(res.ok){
+    form.reset();
+    status.innerText = "Message sent successfully.";
+  } else {
+    status.innerText = "Something went wrong. Please try again.";
+  }
+});
+</script>

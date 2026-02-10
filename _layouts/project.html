@@ -17,9 +17,9 @@ layout: base
           <div class="col-12 col-md-4 mb-4">
             <img src="{{ site.baseurl }}{{ p.overview.image }}" style="width:100%;" />
           </div>
-          <div class="col-12 col-md-8 mb-4">
+          <div class="col-12 col-md-8">
             {% for para in p.overview.intro %}
-              <p class="text-secondary">{{ para }}</p>
+              <p class="">{{ para }}</p>
             {% endfor %}
           </div>
         </div>
@@ -36,7 +36,7 @@ layout: base
       <div class="col-md-4">
         <div class="card h-100 p-4">
           <h5>{{ u.title }}</h5>
-          <p class="text-secondary">{{ u.description }}</p>
+          <p class="">{{ u.description }}</p>
         </div>
       </div>
       {% endfor %}
@@ -51,7 +51,7 @@ layout: base
       <div class="col-md-6">
         <div class="card h-100 p-4">
           <h5>{{ w.title }}</h5>
-          <ul class="text-secondary mb-0">
+          <ul class=" mb-0">
             {% for i in w.items %}
             <li>{{ i }}</li>
             {% endfor %}
@@ -71,7 +71,7 @@ layout: base
         <div class="card h-100">
           <div class="card-body">
             <h6>{{ c.title }}</h6>
-            <p class="text-secondary mb-0">{{ c.description }}</p>
+            <p class=" mb-0">{{ c.description }}</p>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ layout: base
       <div class="card-body">
         <h3 class="fw-semibold mb-3">{{ p.future.title }}</h3>
         {% for para in p.future.paragraphs %}
-          <p class="text-secondary col-lg-9">{{ para }}</p>
+          <p class=" col-lg-9">{{ para }}</p>
         {% endfor %}
       </div>
     </div>

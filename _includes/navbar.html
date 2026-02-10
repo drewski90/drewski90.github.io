@@ -67,6 +67,24 @@
       </li>
       {% endfor %}
 
+      <li class="nav-item mt-3">
+  <div class="text-uppercase small opacity-75">
+    Posts
+  </div>
+
+  <ul class="nav flex-column ms-2 mt-1">
+    {% for post in site.posts limit:10 %}
+      <li>
+        <a class="nav-link text-light small"
+           href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</li>
+
+
     </ul>
   </div>
 </div>
