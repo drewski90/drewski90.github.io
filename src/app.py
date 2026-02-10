@@ -50,6 +50,7 @@ def lambda_handler(event, context):
             "Body": {"Text": {"Data": json.dumps(body)}}
         }
     )
+    print(CORS_HEADERS)
 
     return {
         "statusCode": 200,
