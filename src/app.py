@@ -8,6 +8,8 @@ dynamodb = boto3.resource("dynamodb")
 
 TABLE = os.environ["TABLE_NAME"]
 DOMAIN = os.environ["DOMAIN"]
+SENDER_EMAIL = os.environ['SENDER_EMAIL']
+RECEIVER_EMAIL = os.environ['RECEIVER_EMAIL']
 
 CORS_HEADERS = {
     "Access-Control-Allow-Origin": f"https://{DOMAIN}",
@@ -43,14 +45,13 @@ def lambda_handler(event, context):
     )
 
     ses.send_email(
-        Source=f"forms@{DOMAIN}",
-        Destination={"ToAddresses": [f"martinezdynamics@{DOMAIN}"]},
+        Source=SENDER_EMAIL,
+        Destination={"ToAddresses": [RECEIVER_EMAIL]},
         Message={
             "Subject": {"Data": "New Form Submission"},
             "Body": {"Text": {"Data": json.dumps(body)}}
         }
     )
-    print(CORS_HEADERS)
 
     return {
         "statusCode": 200,

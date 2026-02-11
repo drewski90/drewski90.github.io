@@ -23,6 +23,11 @@ title: Andrew Martinez
           <div class="d-flex justify-content-center mb-4 small text-secondary">
             <span id="rotating-badge" class="h5 p-2 m-0"></span>
           </div>
+          <a href="/resume">
+            <div class="btn btn-primary btn-sm">
+            View Resume
+            </div>
+          </a>
 
         </div>
       </div>
@@ -57,3 +62,65 @@ title: Andrew Martinez
 </script>
 
 {% include project_cards.html %}
+
+<section class="tech-stack glass py-5 border-0">
+  <div class="container">
+
+    <h4 class="text-center mb-5">Core Technologies</h4>
+
+    <div class="stack-grid">
+
+      <div class="stack-group">
+        <div class="stack-title">Backend & Services</div>
+        <div class="stack-items">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>FastAPI</span>
+          <span>Django</span>
+          <span>Node.js</span>
+          <span>REST / GraphQL APIs</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Cloud & Infrastructure</div>
+        <div class="stack-items">
+          <span>AWS Lambda</span>
+          <span>API Gateway</span>
+          <span>DynamoDB</span>
+          <span>S3</span>
+          <span>CloudFormation</span>
+          <span>Docker</span>
+          <span>Linux</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Data & Messaging</div>
+        <div class="stack-items">
+          <span>DynamoDB</span>
+          <span>MongoDB</span>
+          <span>MySQL</span>
+          <span>SQL Server</span>
+          <span>Redis</span>
+          <span>Typesense</span>
+          <span>SQS</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Frontend & Interfaces</div>
+        <div class="stack-items">
+          <span>Vue.js</span>
+          <span>React</span>
+          <span>Bootstrap</span>
+          <span>Tailwind</span>
+          <span>HTML / CSS / SASS</span>
+          <span>Jinja</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

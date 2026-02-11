@@ -7,7 +7,10 @@ Parameters:
     Type: String
   HostedZoneId:
     Type: String
-    Description: Route53 Hosted Zone ID for the domain
+  SenderEmail:
+    Type: String
+  ReceiverEmail:
+    Type: String
 
 Globals:
   Function:
@@ -24,6 +27,14 @@ Resources:
     Type: AWS::SES::EmailIdentity
     Properties:
       EmailIdentity: !Ref DomainName
+
+  #################################
+  # Optional sender email identity
+  #################################
+  SesSenderIdentity:
+    Type: AWS::SES::EmailIdentity
+    Properties:
+      EmailIdentity: !Ref SenderEmail
 
   #################################
   # Route53 DKIM records
@@ -58,9 +69,9 @@ Resources:
       ResourceRecords:
         - !GetAtt SesDomainIdentity.DkimDNSTokenValue3
 
-  #########################################
+  #################################
   # DynamoDB
-  #########################################
+  #################################
   FormTable:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -73,9 +84,9 @@ Resources:
         - AttributeName: submission_id
           KeyType: HASH
 
-  #########################################
+  #################################
   # Lambda
-  #########################################
+  #################################
   FormHandlerFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -86,6 +97,8 @@ Resources:
         Variables:
           TABLE_NAME: !Ref FormTable
           DOMAIN: !Ref DomainName
+          SENDER_EMAIL: !Ref SenderEmail
+          RECEIVER_EMAIL: !Ref ReceiverEmail
       Policies:
         - AWSLambdaBasicExecutionRole
         - DynamoDBCrudPolicy:
@@ -101,11 +114,11 @@ Resources:
         Cors:
           AllowOrigins:
             - !Sub https://${DomainName}
+            - !Sub https://www.${DomainName}
           AllowMethods:
             - POST
           AllowHeaders:
             - Content-Type
-
 
 Outputs:
   FunctionUrl:

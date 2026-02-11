@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Andrew Martinez — Resume</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    .playfair-display-sc-regular {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-sc-bold {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair-display-sc-black {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.playfair-display-sc-regular-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display-sc-bold-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.playfair-display-sc-black-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root{
+  --paper:#eeeeee;
+  --paper-2:#e4e4e4;
+  --ink:#1b1f24;
+  --muted:#29323c;
+  --rule:#cfcfcf;
+}
+body{
+  font-family:'Roboto',sans-serif;
+  background-color: #edeaea;
+  background: linear-gradient(90deg,var(--paper),var(--paper-2));
+}
+.resume{
+  width: 100%;
+  margin: auto;
+  border-radius: 6px;
+  overflow:hidden;
+}
+.pad{
+  padding: 56px 56px 48px;
+}
+.name{
+  letter-spacing: 12px;
+  font-weight: 900;
+  font-size: 45px;
+    color: #202f46;
+    letter-spacing: 8px;
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.7),
+        0 -1px 1px rgba(0,0,0,0.22);
+}
+.subtitle{
+  line-height: 12px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  letter-spacing: 12px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.rule{
+  height: 1px;
+  background: var(--rule);
+}
+.section-title{
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink);
+}
+.small{
+  font-size: 13px;
+  color: var(--muted);
+}
+.kicker{
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.job-title{
+  font-weight: 600;
+  color: var(--ink);
+}
+.meta{
+  font-size: 12px;
+  color: var(--muted);
+}
+.bullets{
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+.bullets li{ margin-bottom: 6px; }
+
+/* subtle vertical guide like the reference template */
+.vline{
+  position: relative;
+}
+.vline:before{
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--rule);
+}
+
+@media (max-width: 768px){
+  .pad{ padding: 28px 22px 26px; }
+  .name{ letter-spacing: 6px; font-size: 30px; }
+}
+
+@media print{
+  body{ background:#fff; }
+  .resume{ box-shadow:none; margin:0; }
+  .pad{ padding: 44px 44px 40px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container" style="max-width:1000px">
+  <div class="resume">
+    <div class="pad">
+
+      <!-- Header -->
+      <div class="text-center">
+        <div class="name">ANDREW MARTINEZ</div>
+        <div class="rule my-3"></div>
+        <div class="subtitle">SOFTWARE ENGINEER</div>
+      </div>
+
+      <div class="rule my-3"></div>
+
+      <!-- Top row: Contact + Profile -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="section-title mb-3">CONTACT</div>
+          <div class="small">
+            <div class="mb-1">+1 510 927 8583</div>
+            <div class="mb-1">martinezdynamics@gmail.com</div>
+            <div class="mb-1">Oakland, CA 94612</div>
+            <a href="https://apmartinez.com">
+              <div class="mb-3">apmartinez.com</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="section-title mb-3">PROFILE</div>
+          <div class="small">
+            Software engineer focused on cloud-based web platforms, data pipelines, and application backends using AWS, Flask, and Vue.
+            Experience designing dashboards, ingestion workflows, and automation tools that improve operational visibility and data accessibility.
+            Strong end-to-end development experience spanning infrastructure, backend services, and user-facing applications.
+          </div>
+        </div>
+      </div>
+
+      <div class="rule my-4"></div>
+
+      <!-- Main grid: Education/Skills/Certs (left) + Experience/Projects (right) -->
+      <div class="row g-4">
+
+        <!-- Left column -->
+        <div class="col-md-4">
+
+          <div class="section-title mb-3">EDUCATION</div>
+          <div class="small mb-4">
+            <div class="job-title">High school diploma</div>
+            <div class="meta">Chabot College — Hayward, CA</div>
+            <div class="meta">2011</div>
+          </div>
+
+          <div class="section-title mb-3">SKILLS</div>
+          <div class="small mb-4 pe-2">
+            <div>Linux</div>
+            <div>Bash / Shell scripting</div>
+            <div>HTML / CSS / SASS / Bootstrap / Tailwind</div>
+            <div>Python (Flask, Django, FastAPI)</div>
+            <div>Git</div>
+            <div>Node.js</div>
+            <div>Web applications</div>
+            <div>Vue.js / React</div>
+            <div>System architecture design</div>
+            <div>Server management</div>
+            <div>AWS (Lambda, API Gateway, DynamoDB, S3, WebSockets, etc)</div>
+            <div>Implementing web services</div>
+            <div>REST / SOAP / GraphQL APIs</div>
+            <div>DynamoDB, MongoDB, MySQL, SQL Server</div>
+            <div>JavaScript (ES6+)</div>
+            <div>System design</div>
+            <div>Docker</div>
+          </div>
+
+        </div>
+
+        <!-- Right column -->
+        <div class="col-md-8 vline">
+
+          <div class="section-title mb-3">SELECTED ENGINEERING PROJECTS</div>
+          <div class="mb-4">
+            <div class="job-title">Independent / Personal Projects</div>
+            <div class="meta mb-2">April 2023 to Present</div>
+            <ul class="small bullets">
+              <li>Designed AWS serverless architecture for multi-tenant aviation data ingestion, search indexing, and analytics pipelines.</li>
+              <li>Built DynamoDB single-table models and event-driven ingestion workflows supporting registry and operational datasets.</li>
+              <li>Implemented near-real-time search indexing pipelines using DynamoDB Streams and queue workers powering Typesense search.</li>
+              <li>Developed Square API-integrated booking platform with authentication, role-based administration, and operational dashboards.</li>
+              <li>Designed backend APIs and location-aware booking workflows using Radar Maps for routing and service-area validation.</li>
+            </ul>
+
+          </div>
+
+          <div class="section-title mb-3">WORK EXPERIENCE</div>
+
+          <div class="mb-4">
+            <div class="job-title">Senior Lead Technician</div>
+            <div class="meta mb-2">Kaiser Air — Oakland, CA • 2014 to Present</div>
+            <ul class="small bullets">
+              <li>Led daily ramp and operational coordination for aircraft ground operations and logistics teams.</li>
+              <li>Supervised staff operational safety procedures and cross-team coordination during high-volume operations.</li>
+              <li>Recognized for reliability, leadership, and operational problem-solving in fast-paced safety-critical environments.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="job-title">Full Stack Developer</div>
+            <div class="meta mb-2">Redacted Studios — Oakland, CA • August 2019 to June 2023</div>
+            <ul class="small bullets">
+              <li>Designed and deployed a serverless pricing intelligence platform using AWS Lambda and scheduled scraping workflows, storing normalized vendor pricing data in DynamoDB for comparative analysis.</li>
+              <li>Built internal analytics dashboards enabling procurement teams to identify lowest-cost equipment vendors and monitor pricing trends across suppliers.</li>
+              <li>Developed real-time communication prototypes integrating AWS WebSocket APIs, Twilio voice services, and Google Speech-to-Text transcription to support live phone-call transcription and LLM-assisted response workflows.</li>
+              <li>Implemented a browser-based Web Audio pipeline enabling real-time audio streaming from web applications for transcription and conversational processing.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

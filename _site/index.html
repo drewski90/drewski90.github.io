@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="dark">
+<html class="dark">
 <head>
   <meta charset="UTF-8">
   <title>Andrew Martinez</title>
@@ -156,7 +156,7 @@
     
       <li>
         <a class="nav-link text-light small"
-           href="/jekyll/update/2026/02/09/welcome-to-jekyll.html">
+           href="/jekyll/update/2026/02/09/freelance.html">
           Freelance Services
         </a>
       </li>
@@ -190,6 +190,11 @@
           <div class="d-flex justify-content-center mb-4 small text-secondary">
             <span id="rotating-badge" class="h5 p-2 m-0"></span>
           </div>
+          <a href="/resume">
+            <div class="btn btn-primary btn-sm">
+            View Resume
+            </div>
+          </a>
 
         </div>
       </div>
@@ -442,18 +447,201 @@
   </div>
 </section>
 
+<section class="tech-stack glass py-5 border-0">
+  <div class="container">
+
+    <h4 class="text-center mb-5">Core Technologies</h4>
+
+    <div class="stack-grid">
+
+      <div class="stack-group">
+        <div class="stack-title">Backend &amp; Services</div>
+        <div class="stack-items">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>FastAPI</span>
+          <span>Django</span>
+          <span>Node.js</span>
+          <span>REST / GraphQL APIs</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Cloud &amp; Infrastructure</div>
+        <div class="stack-items">
+          <span>AWS Lambda</span>
+          <span>API Gateway</span>
+          <span>DynamoDB</span>
+          <span>S3</span>
+          <span>CloudFormation</span>
+          <span>Docker</span>
+          <span>Linux</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Data &amp; Messaging</div>
+        <div class="stack-items">
+          <span>DynamoDB</span>
+          <span>MongoDB</span>
+          <span>MySQL</span>
+          <span>SQL Server</span>
+          <span>Redis</span>
+          <span>Typesense</span>
+          <span>SQS</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Frontend &amp; Interfaces</div>
+        <div class="stack-items">
+          <span>Vue.js</span>
+          <span>React</span>
+          <span>Bootstrap</span>
+          <span>Tailwind</span>
+          <span>HTML / CSS / SASS</span>
+          <span>Jinja</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
   </main>
 
-  <footer class="-top py-4">
-  <div class="container text-center text-muted small">
-    <div>&copy; 2026 Andrew Martinez</div>
-    <div class="mt-1">
-      <a href="https://github.com/drewski90" class="text-muted me-3">GitHub</a>
+  <footer class="site-footer bg-black py-5">
+  <div class="container">
+
+    <div class="row gy-5 align-items-start">
+
+      <!-- Column 1 -->
+      <div class="col-12 col-lg-4">
+        <h5 class="mb-3">Andrew Martinez</h5>
+
+        <p class="small text-secondary mb-3">
+          Software engineer focused on cloud-native systems, ingestion pipelines,
+          and multi-tenant SaaS platforms.
+        </p>
+
+        <div class="small">
+          Oakland, CA<br>
+          <a href="mailto:martinezdynamics@gmail.com">
+            martinezdynamics@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-6 col-lg-2">
+        <h6 class="mb-3">Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="https://github.com/drewski90/" target="_blank">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 (Contact Form) -->
+      <div class="col-12 col-lg-6">
+        <h6 class="mb-3">Contact</h6>
+
+        <form id="contactForm" novalidate>
+
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" style="display:none">
+
+          <div class="row g-3">
+
+            <div class="col-12 col-md-6">
+              <input class="form-control"
+                     name="name"
+                     placeholder="Name"
+                     autocomplete="name"
+                     required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <input type="email"
+                     class="form-control"
+                     name="email"
+                     placeholder="Email"
+                     autocomplete="email"
+                     required>
+            </div>
+
+            <div class="col-12">
+              <textarea class="form-control"
+                        rows="3"
+                        name="message"
+                        placeholder="Project details"
+                        required></textarea>
+            </div>
+
+            <div class="col-12 d-grid">
+              <button id="submitBtn"
+                      type="submit"
+                      class="btn btn-primary">
+                Send Request
+              </button>
+            </div>
+
+          </div>
+
+          <div id="formStatus" class="small mt-3"></div>
+
+        </form>
+      </div>
+
     </div>
+
+    <hr class="mt-5 mb-3">
+
+    <div class="text-center small">
+      © 2026 Andrew Martinez
+    </div>
+
   </div>
 </footer>
+
+
+
+<script>
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(form));
+
+  submitBtn.disabled = true;
+  status.innerText = "Sending...";
+
+  try {
+    const res = await fetch("https://iz6lue2sgrqksxoemuzvkygrrq0josfk.lambda-url.us-west-1.on.aws/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if(res.ok){
+      form.reset();
+      status.innerText = "Message sent successfully.";
+    } else {
+      status.innerText = "Submission failed. Please try again.";
+    }
+
+  } catch(err){
+    status.innerText = "Network error. Please try again.";
+  }
+
+  submitBtn.disabled = false;
+});
+</script>
 
 
   <!-- Bootstrap JS -->

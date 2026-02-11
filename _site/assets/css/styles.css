@@ -35,8 +35,8 @@ body {
   font-variation-settings: "wdth" 100;
   background: radial-gradient(
     ellipse at top,
-    #141824 0%,
-    #0e1217 40%,
+    #04133d 0%,
+    #0e1a29 40%,
     #06080b 75%,
     #040507 100%
   );
@@ -82,6 +82,7 @@ a > div.card:hover {
 .btn {
   font-weight: 600;
   letter-spacing: 0.2px;
+  color: white;
 }
 
 .btn:focus,
@@ -345,4 +346,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .offcanvas {
   max-width: 60vw !important;
+}
+
+.tech-stack {
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.stack-group {
+  text-align: center;
+}
+
+.stack-title {
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stack-items span {
+  padding: 6px 12px;
+  font-size: .85rem;
 }
