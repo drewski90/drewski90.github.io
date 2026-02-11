@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7f9;
+      padding: 24px;
+      color: #111;
+    }
+
+    .card {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 28px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #6b7280;
+      letter-spacing: .08em;
+    }
+
+    .value {
+      font-size: 15px;
+      margin-top: 4px;
+    }
+
+    .message {
+      margin-top: 18px;
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+
+    <h2>New Contact Submission</h2>
+
+    <div class="field">
+      <div class="label">Name</div>
+      <div class="value">{{ name }}</div>
+    </div>
+
+    <div class="field">
+      <div class="label">Email</div>
+      <div class="value">{{ email }}</div>
+    </div>
+
+    {% if company %}
+    <div class="field">
+      <div class="label">Company</div>
+      <div class="value">{{ company }}</div>
+    </div>
+    {% endif %}
+
+    <div class="field">
+      <div class="label">Message</div>
+      <div class="message">{{ message }}</div>
+    </div>
+
+    <div class="footer">
+      Sent from apmartinez.com contact form
+    </div>
+
+  </div>
+</body>
+</html>
