@@ -33,6 +33,9 @@ body {
   font-style: normal;
   font-size: 18px !important;
   font-variation-settings: "wdth" 100;
+}
+
+html, body {
   background: radial-gradient(
     ellipse at top,
     #04133d 0%,
@@ -40,7 +43,6 @@ body {
     #06080b 75%,
     #040507 100%
   );
-
 }
 
 
@@ -59,7 +61,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: #e6e6e6;
   transition: border 0.25s ease;
   background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(68, 138, 223, 1);
+  border: 1px solid rgb(1, 4, 7);
   box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.55),
         0 0 18px rgba(68, 138, 223, 0.18);
@@ -94,7 +96,7 @@ a > div.card:hover {
   color: #ffffff;
   background: radial-gradient(
     ellipse at top,
-    #141824 0%,
+    #090c12 0%,
     #0b0e11 45%,
     #050608 100%
   );
@@ -349,7 +351,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-stack {
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(0, 0, 0, 1) !important;
+  border-bottom: 1px solid rgba(0,0,0,1) !important;
 }
 
 .stack-grid {
@@ -382,5 +385,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: whitesmoke !important;
+  color: rgb(255, 251, 240) !important;
 }
