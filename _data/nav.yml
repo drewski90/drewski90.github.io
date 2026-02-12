@@ -3,8 +3,6 @@ brand: Andrew Martinez
 items:
   - title: Home
     url: /
-  - title: About
-    url: /about
 
 dropdowns:
   - id: aircraftops

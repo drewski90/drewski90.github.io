@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  border-bottom: 1px solid black;
 }
 
 .hero .container {

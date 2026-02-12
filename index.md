@@ -23,11 +23,7 @@ title: Andrew Martinez
           <div class="d-flex justify-content-center mb-4 small text-secondary">
             <span id="rotating-badge" class="h5 p-2 m-0"></span>
           </div>
-          <a href="/resume">
-            <div class="btn btn-primary btn-sm">
-            View Resume
-            </div>
-          </a>
+          
 
         </div>
       </div>
@@ -60,6 +56,67 @@ title: Andrew Martinez
     ]
   });
 </script>
+
+<section class="mb-4">
+
+  <h3 class="fw-semibold mb-4 py-2 text-center">About Me</h3>
+
+  <div class="container">
+  <div class="card">
+    <div class="card-body p-4">
+
+      <div class="row g-4 align-items-start">
+
+        <!-- Bio -->
+        <div class="col-12 col-md-7">
+
+          <p class="mb-3">
+            I build cloud-native solutions, ingestion pipelines, and backend
+            systems focused on reliability, scalability, and operational
+            simplicity. My work centers on serverless AWS architectures,
+            event-driven processing, and multi-tenant SaaS applications that
+            support real-world operational workflows.
+          </p>
+
+          <p class="mb-0">
+            In addition to larger platform work, I take on freelance projects
+            including website builds, booking and scheduling systems,
+            automation tools, API integrations, and performance improvements.
+            I focus on delivering practical solutions that create measurable
+            operational value, regardless of project size.
+          </p>
+
+        </div>
+
+        <!-- Focus Areas -->
+        <div class="col-12 col-md-5">
+
+          <div class="fw-semibold mb-2">Focus Areas</div>
+
+          <ul class="text-secondary small mb-3">
+            <li class="mb-2">Cloud-native backend systems and APIs</li>
+            <li class="mb-2">Event-driven ingestion and data pipelines</li>
+            <li class="mb-2">Booking, scheduling, and operational platforms</li>
+            <li class="mb-2">Automation, integrations, and dashboards</li>
+          </ul>
+
+          <div class="small text-secondary">
+            Available for freelance projects — short-term, contract, and
+            consulting engagements.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+</section>
+
+
 
 {% include project_cards.html %}
 
