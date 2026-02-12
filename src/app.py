@@ -3,7 +3,7 @@ import boto3
 import os
 from ulid import ULID
 from models import FormEnvelope
-from templates import render_form_email
+from templates import render_form_email, render_template
 
 ses = boto3.client("ses")
 dynamodb = boto3.resource("dynamodb")
@@ -62,6 +62,21 @@ def lambda_handler(event, context):
             "Body": body
         }
     )
+    confirm_html = render_template("confirmation.html.j2", form.model_dump())
+    confirm_text = render_template("confirmation.txt.j2", form.model_dump())
+
+    ses.send_email(
+        Source=SENDER_EMAIL,
+        Destination={"ToAddresses": [form.email]},
+        Message={
+            "Subject": {"Data": "Message received — Andrew Martinez"},
+            "Body": {
+                "Text": {"Data": confirm_text},
+                "Html": {"Data": confirm_html}
+            }
+        }
+    )
+
 
     return {
         "statusCode": 200,

@@ -443,7 +443,7 @@
     <div class="row gy-5 align-items-start">
 
       <!-- Column 1 -->
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-6">
         <h5 class="mb-3">Andrew Martinez</h5>
 
         <p class="small text-secondary mb-3">
@@ -451,16 +451,13 @@
           and multi-tenant SaaS platforms.
         </p>
 
-        <div class="small">
+        <div class="small mb-3">
           Oakland, CA<br>
           <a href="mailto:martinezdynamics@gmail.com">
             martinezdynamics@gmail.com
           </a>
         </div>
-      </div>
 
-      <!-- Column 2 -->
-      <div class="col-6 col-lg-2">
         <h6 class="mb-3">Links</h6>
         <ul class="list-unstyled small">
           <li><a href="/resume">Resume</a></li>
@@ -475,49 +472,52 @@
 
         <form id="contactForm" novalidate>
 
-          <!-- Honeypot anti-spam -->
-          <input type="text" name="website" style="display:none">
+  <!-- Honeypot -->
+  <input type="text" name="website" style="display:none">
 
-          <div class="row g-3">
+  <!-- discriminator -->
+  <input type="hidden" name="form_type" value="contact">
 
-            <div class="col-12 col-md-6">
-              <input class="form-control"
-                     name="name"
-                     placeholder="Name"
-                     autocomplete="name"
-                     required>
-            </div>
+  <div class="row g-3">
 
-            <div class="col-12 col-md-6">
-              <input type="email"
-                     class="form-control"
-                     name="email"
-                     placeholder="Email"
-                     autocomplete="email"
-                     required>
-            </div>
+    <div class="col-12 col-md-6">
+      <input class="form-control"
+             name="name"
+             placeholder="Name"
+             autocomplete="name"
+             required>
+    </div>
 
-            <div class="col-12">
-              <textarea class="form-control"
-                        rows="3"
-                        name="message"
-                        placeholder="Project details"
-                        required></textarea>
-            </div>
+    <div class="col-12 col-md-6">
+      <input type="email"
+             class="form-control"
+             name="email"
+             placeholder="Email"
+             autocomplete="email"
+             required>
+    </div>
 
-            <div class="col-12 d-grid">
-              <button id="submitBtn"
-                      type="submit"
-                      class="btn btn-primary">
-                Send Request
-              </button>
-            </div>
+    <div class="col-12">
+      <textarea class="form-control"
+                rows="3"
+                name="message"
+                placeholder="Project details"
+                required></textarea>
+    </div>
 
-          </div>
+    <div class="col-12 d-grid">
+      <button id="submitBtn"
+              type="submit"
+              class="btn btn-primary">
+        Send Request
+      </button>
+    </div>
 
-          <div id="formStatus" class="small mt-3"></div>
+  </div>
 
-        </form>
+  <div id="formStatus" class="small mt-3"></div>
+</form>
+
       </div>
 
     </div>
@@ -541,7 +541,11 @@ const submitBtn = document.getElementById('submitBtn');
 form.addEventListener('submit', async e => {
   e.preventDefault();
 
-  const data = Object.fromEntries(new FormData(form));
+  const raw = Object.fromEntries(new FormData(form));
+
+  const payload = {
+    data: raw
+  };
 
   submitBtn.disabled = true;
   status.innerText = "Sending...";
@@ -550,7 +554,7 @@ form.addEventListener('submit', async e => {
     const res = await fetch("https://iz6lue2sgrqksxoemuzvkygrrq0josfk.lambda-url.us-west-1.on.aws/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify(payload)
     });
 
     if(res.ok){
@@ -566,6 +570,7 @@ form.addEventListener('submit', async e => {
 
   submitBtn.disabled = false;
 });
+
 </script>
 
 
