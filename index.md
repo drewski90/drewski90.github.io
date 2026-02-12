@@ -62,7 +62,7 @@ title: Andrew Martinez
 
   <h3 class="fw-semibold mb-4 py-2 text-center">About Me</h3>
 
-  <div class="container">
+  <div class="container" style="max-width:1200px;">
     <div class="card">
       <div class="card-body p-4">
       <div class="row g-4 justify-content-center">
@@ -98,7 +98,7 @@ title: Andrew Martinez
 {% include project_cards.html %}
 
 <section class="tech-stack glass py-5 border-0">
-  <div class="container">
+  <div class="container"  style="max-width:1200px;">
 
     <h4 class="text-center mb-5">Core Technologies</h4>
 
