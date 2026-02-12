@@ -6,7 +6,8 @@ title: Andrew Martinez
 <header class="hero position-relative overflow-hidden mb-3">
 
   <!-- Animated Canvas -->
-  <canvas id="heroCanvas"
+
+<canvas id="heroCanvas"
           class="gl-canvas position-absolute top-0 start-0 w-100 h-100"
           style="z-index:0;"></canvas>
 
@@ -23,15 +24,15 @@ title: Andrew Martinez
           <div class="d-flex justify-content-center mb-4 small text-secondary">
             <span id="rotating-badge" class="h5 p-2 m-0"></span>
           </div>
-          
+
 
         </div>
       </div>
     </div>
+
   </div>
 
 </header>
-
 
 <script type="module">
   import { initHoloShader } from "{{ site.baseurl }}/assets/js/shader.js";
@@ -62,61 +63,37 @@ title: Andrew Martinez
   <h3 class="fw-semibold mb-4 py-2 text-center">About Me</h3>
 
   <div class="container">
-  <div class="card">
-    <div class="card-body p-4">
+    <div class="card">
+      <div class="card-body p-4">
+      <div class="row g-4 justify-content-center">
 
-      <div class="row g-4 align-items-start">
+  <div class="col-12">
 
-        <!-- Bio -->
-        <div class="col-12 col-md-7">
+    <p class="mb-3">
+      I design and build cloud-native solutions, backend systems, and operational
+      tooling focused on reliability, scalability, and practical real-world use.
+      My work centers on serverless AWS architectures, event-driven processing,
+      and multi-tenant SaaS systems that support data ingestion, automation, and
+      operational workflows.
+    </p>
 
-          <p class="mb-3">
-            I build cloud-native solutions, ingestion pipelines, and backend
-            systems focused on reliability, scalability, and operational
-            simplicity. My work centers on serverless AWS architectures,
-            event-driven processing, and multi-tenant SaaS applications that
-            support real-world operational workflows.
-          </p>
+    <p class="mb-0">
+      Alongside larger platform projects, I also work with businesses and
+      independent clients on website systems, integrations, booking platforms,
+      workflow automation, and performance improvements — delivering practical
+      engineering solutions for projects of any size.
+    </p>
 
-          <p class="mb-0">
-            In addition to larger platform work, I take on freelance projects
-            including website builds, booking and scheduling systems,
-            automation tools, API integrations, and performance improvements.
-            I focus on delivering practical solutions that create measurable
-            operational value, regardless of project size.
-          </p>
+  </div>
 
-        </div>
-
-        <!-- Focus Areas -->
-        <div class="col-12 col-md-5">
-
-          <div class="fw-semibold mb-2">Focus Areas</div>
-
-          <ul class="text-secondary small mb-3">
-            <li class="mb-2">Cloud-native backend systems and APIs</li>
-            <li class="mb-2">Event-driven ingestion and data pipelines</li>
-            <li class="mb-2">Booking, scheduling, and operational platforms</li>
-            <li class="mb-2">Automation, integrations, and dashboards</li>
-          </ul>
-
-          <div class="small text-secondary">
-            Available for freelance projects — short-term, contract, and
-            consulting engagements.
-          </div>
-
-        </div>
+</div>
 
       </div>
-
     </div>
 
   </div>
-  </div>
 
 </section>
-
-
 
 {% include project_cards.html %}
 
@@ -181,4 +158,3 @@ title: Andrew Martinez
 
   </div>
 </section>
-

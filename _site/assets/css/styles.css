@@ -94,21 +94,14 @@ a > div.card:hover {
 }
 
 .btn-primary {
+  border-radius: 0px;
   color: #ffffff;
-  background: radial-gradient(
-    ellipse at top,
-    #090c12 0%,
-    #0b0e11 45%,
-    #050608 100%
-  );
-}
-
-.btn-primary:hover {
-  filter: brightness(1.04);
+  background:rgb(0, 0, 0, 0.3);
+  border: 1px solid rgb(41, 193, 220);
 }
 
 .btn-outline-primary {
-  color: rgba(34, 211, 238, 0.95);
+  color: rgba(34, 211, 238, 0.779);
   border-color: rgba(34, 211, 238, 0.35);
   background: rgba(34, 211, 238, 0.06);
 }
@@ -116,7 +109,7 @@ a > div.card:hover {
 .btn-outline-primary:hover {
   color: #001018;
   background: rgba(34, 211, 238, 0.95);
-  border-color: rgba(34, 211, 238, 0.75);
+  border-color: rgb(4, 177, 203);
 }
 
 .btn-secondary,
