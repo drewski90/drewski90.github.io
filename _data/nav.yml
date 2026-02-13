@@ -12,8 +12,8 @@ dropdowns:
         url: https://aircraft-ops.com/
       - title: Purpose
         url: /projects/aircraftops/
-      - title: Architecture
-        url: /projects/aircraftops/architecture
+      - title: Documentation
+        url: https://docs.aircraft-ops.com/
 
   - id: agt
     title: A Goddess’s Touch
