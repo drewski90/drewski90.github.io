@@ -1,5 +1,5 @@
 .hero {
-  height: 60vh;
+  height: 70vh;
   min-height: 320px;
   color: white;
   display: flex;
@@ -39,10 +39,10 @@ body {
 html, body {
   background: radial-gradient(
     ellipse at top,
-    #04133d 0%,
-    #0e1a29 40%,
+    #03003c 0%,
+    #040627 40%,
     #06080b 75%,
-    #040507 100%
+    #000309 100%
   );
 }
 
