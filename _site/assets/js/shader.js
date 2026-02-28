@@ -63,7 +63,7 @@ void main(){
 
   // deep blue → purple-blue range
   vec3 blue   = vec3(0.10, 0.35, 1.00);
-  vec3 purple = vec3(0.55, 0.20, 1.00);
+  vec3 purple = vec3(0.35, 0.20, 1.00);
 
   float t = sin(u_time * 0.25) * 0.5 + 0.5;
   vec3 color = mix(blue, purple, t);
